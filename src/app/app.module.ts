@@ -8,12 +8,14 @@ import {ApiServiceService} from './api-service.service'
 import { from } from 'rxjs';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Demo1Component } from './demo1/demo1.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FlightsComponent
+    FlightsComponent,
+    Demo1Component
   ],
   imports: [
     BrowserModule,

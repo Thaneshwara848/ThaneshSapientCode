@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {  ApiServiceService } from 'src/app/api-service.service';
 import { error } from '@angular/compiler/src/util';
 
@@ -11,15 +11,11 @@ export class FlightsComponent implements OnInit {
   sucess:boolean=true;
   LandSucc:boolean=true;
   showError: string;
-
   constructor(private http:ApiServiceService) { }
-
   flightData:any=[]
   dev_name="Thaneshwara";
-  
   ngOnInit()
   {
-    
      this.http.fetchFlights().subscribe(data=>{
         // console.log("responce recived ",data),
       this.flightData = data;
@@ -62,7 +58,6 @@ export class FlightsComponent implements OnInit {
     })
 
   }
-  
-
+ 
 
 }
